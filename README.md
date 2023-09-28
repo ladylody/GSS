@@ -7,6 +7,7 @@ PHP/MySQL
 # Site de démonstration
 http://www.blueplace.fr/GSS/
 * Connexion "utilisateur" : sdurant / sdurant
+* * Connexion "utilisateur" : lady / lady
 * Connexion "administrateur" : admin / admin
 
 # Fonctionnalités
