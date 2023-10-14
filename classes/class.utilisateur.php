@@ -54,6 +54,27 @@ class utilisateur {
 		return $utilisateur;
 	}
 
+	function generateStrongPassword($length = 12) {
+	    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+[]{}|;:,.<>?';
+	    $password = '';
+	    $max = strlen($characters) - 1;
+	
+	    if ($length < 8) {
+	        $length = 8;
+	    }
+	
+	    for ($i = 0; $i < $length; $i++) {
+	        $password .= $characters[random_int(0, $max)];
+	    }
+	
+	    return $password;
+	}
+	
+	// Exemple d'utilisation
+	$password = generateStrongPassword(12);
+	echo $password;
+
+
 	function verifierLoginPasswordBase($enteredPassword) {
 		$sql = "Select * from utilisateur where login = ?";
 		global $link;
